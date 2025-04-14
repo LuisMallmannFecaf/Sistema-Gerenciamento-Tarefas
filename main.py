@@ -34,5 +34,13 @@ label_em_progresso.pack()
 label_concluido = tk.Label(quadro_concluido, text="Concluído",width=26, height=3, font=fonte, bg=cor_concluido,borderwidth=2,relief=tk.SOLID)
 label_concluido.pack()
 
+# Cria as listas em cada coluna
+lista_a_fazer = tk.Listbox(quadro_a_fazer, selectbackground='#ADD8E6', selectmode=tk.SINGLE, width=24, height=14, font=fonte)
+lista_a_fazer.pack()
+lista_em_progresso = tk.Listbox(quadro_em_progresso, selectbackground='#ADD8E6', selectmode=tk.SINGLE, width=24, height=14, font=fonte)
+lista_em_progresso.pack()
+lista_concluido = tk.Listbox(quadro_concluido, selectbackground='#ADD8E6', selectmode=tk.SINGLE, width=24, height=14, font=fonte)
+lista_concluido.pack()
+
 # Inicia a interface gráfica
 janela.mainloop()
