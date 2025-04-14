@@ -83,6 +83,11 @@ def mover_para_concluido():
   except IndexError:
     messagebox.showwarning("Aviso", "Selecione uma tarefa para mover para 'Concluído'!")
 
+#Botão para mover tarefa em progresso para concluido
+btn_mover_concluido = tk.Button(quadro_em_progresso, 
+text="Mover para 'Concluído'\n>>>>>", width=25, height=3,
+borderwidth=2,relief=tk.SOLID, command=mover_para_concluido, font=fonte)
+btn_mover_concluido.pack()
 
 # Inicia a interface gráfica
 janela.mainloop()
