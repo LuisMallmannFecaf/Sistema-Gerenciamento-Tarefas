@@ -50,5 +50,14 @@ quadro_superior.pack(pady=20)
 entrada = tk.Entry(quadro_superior, width=40, font=fonte)
 entrada.pack()
 
+
+def adicionar_tarefa():
+  nova_tarefa = entrada.get()
+  if nova_tarefa:
+    lista_a_fazer.insert(tk.END, nova_tarefa)
+    entrada.delete(0, tk.END)
+  else:
+    messagebox.showwarning("Aviso", "Digite uma tarefa válida!")
+
 # Inicia a interface gráfica
 janela.mainloop()
