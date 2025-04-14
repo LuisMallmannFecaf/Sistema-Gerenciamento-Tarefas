@@ -59,5 +59,8 @@ def adicionar_tarefa():
   else:
     messagebox.showwarning("Aviso", "Digite uma tarefa válida!")
 
+btn_adicionar = tk.Button(quadro_superior, text="Adicionar Tarefa", command=adicionar_tarefa, font=fonte)
+btn_adicionar.pack()
+
 # Inicia a interface gráfica
 janela.mainloop()
