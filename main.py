@@ -74,5 +74,15 @@ def mover_para_em_progresso():
 btn_mover_em_progresso = tk.Button(quadro_a_fazer, text="Mover para 'Em progresso'\n>>>>>", width=25, height=3,borderwidth=2,relief=tk.SOLID, command=mover_para_em_progresso,font=fonte)
 btn_mover_em_progresso.pack()
 
+def mover_para_concluido():
+  try:
+    selecionada = lista_em_progresso.curselection()[0]
+    tarefa = lista_em_progresso.get(selecionada)
+    lista_em_progresso.delete(selecionada)
+    lista_concluido.insert(tk.END, tarefa)
+  except IndexError:
+    messagebox.showwarning("Aviso", "Selecione uma tarefa para mover para 'Concluído'!")
+
+
 # Inicia a interface gráfica
 janela.mainloop()
