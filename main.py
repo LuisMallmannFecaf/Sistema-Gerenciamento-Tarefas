@@ -95,7 +95,11 @@ def remover_tarefa():
     lista_concluido.delete(selecionada)
 
   except IndexError:
-    messagebox.showwarning("Aviso", "Selecione uma tarefa para remover!")
+    messagebox.showwarning("Aviso", "Selecione uma tarefa concluida para remover!")
+
+#Botão para remover tarefa de concluido
+btn_remover = tk.Button(quadro_concluido, text="Remover Tarefa", width=25, height=3,borderwidth=2,relief=tk.SOLID, command=remover_tarefa, font=fonte)
+btn_remover.pack()
 
 
 # Inicia a interface gráfica
