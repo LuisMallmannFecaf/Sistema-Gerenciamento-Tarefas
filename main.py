@@ -42,5 +42,13 @@ lista_em_progresso.pack()
 lista_concluido = tk.Listbox(quadro_concluido, selectbackground='#ADD8E6', selectmode=tk.SINGLE, width=24, height=14, font=fonte)
 lista_concluido.pack()
 
+# Cria um caixa de entrade de texto para escrever tarefas 
+escrevaTarefa = tk.Label(text="Escreva abaixo a sua tarefa, após clique em 'Adicionar Tarefa' :",font=fonte)
+escrevaTarefa.pack(pady=5)
+quadro_superior = tk.Frame(janela, bg=cor_fundo)
+quadro_superior.pack(pady=20)
+entrada = tk.Entry(quadro_superior, width=40, font=fonte)
+entrada.pack()
+
 # Inicia a interface gráfica
 janela.mainloop()
