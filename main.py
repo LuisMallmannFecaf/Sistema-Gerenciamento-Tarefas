@@ -70,6 +70,9 @@ def mover_para_em_progresso():
   except IndexError:
     messagebox.showwarning("Aviso", "Selecione uma tarefa para mover para 'Em progresso'!")
 
+#Botão para mover tarefa A fazer para em progresso
+btn_mover_em_progresso = tk.Button(quadro_a_fazer, text="Mover para 'Em progresso'\n>>>>>", width=25, height=3,borderwidth=2,relief=tk.SOLID, command=mover_para_em_progresso,font=fonte)
+btn_mover_em_progresso.pack()
 
 # Inicia a interface gráfica
 janela.mainloop()
