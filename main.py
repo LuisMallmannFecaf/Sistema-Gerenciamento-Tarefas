@@ -50,7 +50,6 @@ quadro_superior.pack(pady=20)
 entrada = tk.Entry(quadro_superior, width=40, font=fonte)
 entrada.pack()
 
-
 def adicionar_tarefa():
   nova_tarefa = entrada.get()
   if nova_tarefa:
@@ -61,6 +60,16 @@ def adicionar_tarefa():
 
 btn_adicionar = tk.Button(quadro_superior, text="Adicionar Tarefa", command=adicionar_tarefa, font=fonte)
 btn_adicionar.pack()
+
+def mover_para_em_progresso():
+  try:
+    selecionada = lista_a_fazer.curselection()[0]
+    tarefa = lista_a_fazer.get(selecionada)
+    lista_a_fazer.delete(selecionada)
+    lista_em_progresso.insert(tk.END, tarefa)
+  except IndexError:
+    messagebox.showwarning("Aviso", "Selecione uma tarefa para mover para 'Em progresso'!")
+
 
 # Inicia a interface gráfica
 janela.mainloop()
