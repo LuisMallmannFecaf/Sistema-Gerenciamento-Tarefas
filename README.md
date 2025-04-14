@@ -12,7 +12,7 @@ METODOLOGIA ADOTADA
 - **Metodologia**: Kanban via GitHub Projects
 - **Planejamento**: Aba "Projects" com colunas A Fazer, Em Progresso, Concluído.
 - **Desenvolvimento**: Issues #1 a #11 para criação, fechadas ao implementar.
-- **Qualidade**: Issue #12 teste, 
+- **Qualidade**: Issue #15 teste, 
 - **Histórico**: Commits estruturados com Convetiona Commits.
 - **Mudanças**: Registradas neste README e no Kanban.
 
