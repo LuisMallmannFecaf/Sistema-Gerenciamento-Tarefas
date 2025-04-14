@@ -89,5 +89,14 @@ text="Mover para 'Concluído'\n>>>>>", width=25, height=3,
 borderwidth=2,relief=tk.SOLID, command=mover_para_concluido, font=fonte)
 btn_mover_concluido.pack()
 
+def remover_tarefa():
+  try:
+    selecionada = lista_concluido.curselection()[0]
+    lista_concluido.delete(selecionada)
+
+  except IndexError:
+    messagebox.showwarning("Aviso", "Selecione uma tarefa para remover!")
+
+
 # Inicia a interface gráfica
 janela.mainloop()
